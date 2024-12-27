@@ -1,0 +1,346 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    overflow-x: hidden;
+    padding-top: 80px; 
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding-left: 30px;
+    position: fixed;  /* Make navbar fixed */
+    top: 0;           /* Keep navbar at the top */
+    left: 0;          /* Align it to the left of the screen */
+    width: 100%;      /* Full width */
+    background-color: white;  /* Optional: to ensure it has a background */
+    z-index: 1000;    /* Make sure it stays above other content */
+    padding: 10px 0;  /* Optional: Adjust padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for effect */
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 10px;
+}
+a:hover{
+color: #f00d6f;
+}
+a sup {
+    color:#f00d6f;
+}
+img {
+    object-fit: contain;
+    margin-left: 10px;
+}
+
+/* Search Bar Styling */
+.Search {
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(245, 243, 243);
+    width: 350px;
+    height: 40px;
+    padding-left: 35px;
+    margin-top: 10px;
+}
+#Search {
+    position: absolute;
+    left: 640px;
+    font-size: 15px;
+    top: 33px;
+    color: gray;
+    z-index: 1;
+}
+
+/* Icons */
+i {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+i:hover{
+    color:#d90890
+}
+span {
+    font-size: 12px;
+    font-weight: 600;
+}
+.bag-item-count{
+    font-size: 10px;
+    padding: 10px;
+    color: white;
+    background-color: #f00d6f;
+    border-radius: 50%;
+    width: 100%;
+    height: 50%;
+    margin-top: 1px;
+    margin-right: 2px;
+
+}
+.action-conatiner{
+    margin-top: 7px;
+}
+.action_name{
+    margin-left: 10px;
+}
+
+/* Hero Section */
+.hero-section {
+    justify-content: center;
+    margin: 20px;
+    margin: 10px;
+    max-width: 1300px;
+    justify-items: center;
+    width: 500vh;
+    height: 250px; 
+    background-size: cover;
+    background-position:  top ;
+    animation: slider 11s infinite ;
+}
+
+
+/* Keyframes for Slider Animation */
+
+.section {
+  display: flex;                /* Arrange images in a row */
+  justify-content: center;      /* Center the images */
+  margin: 0;                    /* Remove any margin */
+  overflow: hidden;             /* Hide any overflow content */
+  width: 100vw;                 /* Make the container take full width */
+}
+
+.section img {
+  cursor: pointer;             /* Make the images clickable */
+  width: 48vw;                  /* Set the width of each image */
+  background-size: cover;      /* Ensure the image fits inside */
+  object-fit: cover;            /* Ensure image aspect ratio is maintained */
+  margin: 0;                    /* Remove any default margin */
+}
+
+.section img:first-child {
+  margin-left: -10px;           /* Merge the first image slightly to the left */
+}
+
+.section img:last-child {
+  margin-right: -10px;          /* Merge the last image slightly to the right */
+}
+
+
+
+@keyframes slider {
+    0% {
+        background-image: url('hero6.jpg');
+    }
+    20% {
+        background-image: url('hero4.jpg');
+    }
+    35% {
+        background-image: url('hero.jpg')');
+    }
+    40% {
+        background-image: url('hero\ 3.jpg');
+    }
+    50% {
+        background-image: url('hero\ 7.jpg');
+    }
+    70% {
+        background-image: url('hero6.jpg');
+    }
+    100% {
+        background-image: url('hero\ 3.jpg');
+    }
+}
+
+
+/* main */
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;  /* Space between items */
+}
+
+.item-container {
+    background-color: #fafafa;
+    height: 490px;
+    padding: 20px;
+    width: 290px;
+    margin-left: 10px;  /* Removed margin as grid layout controls spacing */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+.item-image{
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+}
+.current-price{
+    font-weight:700;
+}
+.original-price{
+    text-decoration: line-through;
+    font-weight: 100;
+}
+.discount{
+    color: #f00d6f;
+}
+.company{
+    font-weight: 900;
+}
+.btn{
+    display: flex;
+    gap: 5px;
+    padding-top:10px;
+}
+
+.btn-add-bag {
+    display: inline-flex;
+    align-items: center;
+    padding: 1px 2px;
+    font-size: 12px;
+    font-weight: bold;
+    height: 40px;
+    min-width: 120px; /* Set a minimum width */
+    border: none;
+    border-radius: 5px;
+    background-color: #f00d6f;
+    color: white;
+    cursor: pointer;
+    background-image: url('icons8-bag-50\ (1\).png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+    padding-left: 40px; 
+    word-wrap: break-word; 
+    white-space: normal; 
+    text-align: left; 
+
+}
+.btn-add-bag:hover{
+    background-color: #ffdb58;
+}
+.btn-add {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    width: 500px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f00d6f;
+    color: white;
+    cursor: pointer;
+    background-image: url('icons8-heart-32.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+    padding-left: 40px; /* Space for the icon */
+}
+.btn-add:hover {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    width: 500px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f00d6f;
+    color: white;
+    cursor: pointer;
+    background-image: url('icons8-heart-24.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+    padding-left: 40px; /* Space for the icon */
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #fafafa;
+    color: black;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-section {
+    margin: 10px;
+    flex: 1 1 200px;
+}
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin: 5px 0;
+}
+.footer-section ul li a {
+    color: #9b9797;
+    font-weight: 100;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-section ul li a:hover {
+    color: #000;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+.scroll {
+    display: flex;              /* Use flex to align images in a row */
+    overflow: hidden;           /* Hide any part of images that move outside the container */
+    width: 100%;  
+    white-space: nowrap;
+}
+
+.scroll img {
+    width: 100px;               /* Set the width of each image */
+    height: auto; 
+    flex-shrink: 0;              /* Maintain the aspect ratio */
+    margin-right: 10px;         /* Optional: Space between images */
+}
+
+/* Additional Styling for Scroll Container (Optional) */
+.scroll {
+    position: relative;
+}
+
+
+/* Optional: You can add smooth scrolling behavior */
+.scroll {
+    scroll-behavior: smooth;
+}
